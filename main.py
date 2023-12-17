@@ -124,7 +124,7 @@ async def post_gallery_page(folder: str) -> str:
 
     # Extract the date part
     formatted_date = current_datetime.strftime("%Y-%m-%d")
-    page_title = os.path.basename(folder + "|" + formatted_date)
+    page_title = os.path.basename(folder + "|" + formatted_date+f"|{len(images_src)}P")
 
     image_divs = []
     for index, image in enumerate(images_src, start=1):
